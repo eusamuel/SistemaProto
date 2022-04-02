@@ -79,22 +79,20 @@ namespace Sistema {
             }
         }
 
-        public static Leitor Autenticar(Leitor leitor) {
+        /*public static Leitor Autenticar(Leitor leitor) {
             using (var contextoBd = new Repositorio()) {
                 // EF 6
                 return contextoBd.Leitores
                     .Where(u =>
                         u.Email == leitor.Email
                         && u.Senha == leitor.Senha)
-                    .SingleOrDefault();
-                // LINQ
-                //return (Leitor)
-                //    from u
-                //    in contextoBd.Leitores
-                //    where u.Nome == leitor.Nome
-                //        && u.Senha == leitor.Senha
-                //    select u;
-            }
-        }
+                    .SingleOrDefault();*/
+        // LINQ
+        //return (Leitor)
+        //    from u
+        //    in contextoBd.Leitores
+        //    where u.Nome == leitor.Nome
+        //        && u.Senha == leitor.Senha
+        //    select u;
     }
 }

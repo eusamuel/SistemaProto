@@ -56,6 +56,7 @@
             this.btn_button.TabIndex = 6;
             this.btn_button.Text = "Salvar";
             this.btn_button.UseVisualStyleBackColor = true;
+            this.btn_button.Click += new System.EventHandler(this.btn_button_Click_1);
             // 
             // txtSenha
             // 
@@ -109,13 +110,13 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "Nome: ";
             // 
-            // FrmLeitor
+            // FrmCadastroLeitor
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(350, 236);
             this.Controls.Add(this.panel1);
-            this.Name = "FrmLeitor";
+            this.Name = "FrmCadastroLeitor";
             this.Text = "FrmLeitor";
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
