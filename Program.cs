@@ -25,12 +25,14 @@ namespace Sistema
             // Teste de Entidades
             //
 
-            Usuario usuario = new Usuario();
-            usuario.Id = 123;
-            usuario.Nome = "Luis Guisso";
-            usuario.Email = "mail@mail.com";
-            usuario.Senha = "asdf";
-            usuario.Nascimento = new DateTime(1980, 1, 1);
+            Usuario usuario = new Usuario
+            {
+                Id = 123,
+                Nome = "Luis Guisso",
+                Email = "mail@mail.com",
+                Senha = "asdf",
+                Nascimento = new DateTime(1980, 1, 1)
+            };
 
             Console.WriteLine(usuario);
 

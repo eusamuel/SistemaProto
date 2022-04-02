@@ -3,27 +3,29 @@ using System;
 using System.Configuration;
 using System.Data.Entity;
 
-namespace Sistema
-{
-    internal class Repositorio : DbContext
-    {
+namespace Sistema {
+    internal class Repositorio : DbContext {
         // Singleton
         private static MySqlConnection mySqlConnection = null;
 
+        /// <summary>
+        /// Sou o original
+        /// </summary>
         // Tabela "usuarios"
         public DbSet<Usuario> Usuarios { get; set; }
-
-        public Repositorio() : base(GetDBConnection(), false)
-        {
+        public DbSet<Obra> Obras { get; set; }
+        public DbSet<Autor> Autores { get; set; }
+        public DbSet<Controle> Controles { get; set; }
+        public DbSet<Leitor> Leitores { get; set; }
+        public DbSet<Editora> Editoras { get; set; }    
+        public Repositorio() : base(GetDBConnection(), false) {
             // Se o banco não existe e agora foi corretamente criado,...
-            if (Database.CreateIfNotExists())
-            {
+
+            if (Database.CreateIfNotExists()) {
                 // ... a partir deste próprio objeto, ...
-                using (var dbContext = this)
-                {
+                using (var dbContext = this) {
                     // ... cria um novo usuário com dados padrão ...
-                    Usuario usuario = new Usuario()
-                    {
+                    Usuario usuario = new Usuario() {
                         Nome = "Administrador",
                         Email = "admin@mail.com",
                         Senha = "asdf",
@@ -41,8 +43,7 @@ namespace Sistema
         }
 
         // Quando for criar o modelo (tabelas) no banco de dados...
-        protected override void OnModelCreating(DbModelBuilder modelBuilder)
-        {
+        protected override void OnModelCreating(DbModelBuilder modelBuilder) {
             base.OnModelCreating(modelBuilder);
 
             // ... o email de Usuario é do tipo único.
@@ -52,10 +53,8 @@ namespace Sistema
         }
 
         // Singleton
-        public static MySqlConnection GetDBConnection()
-        {
-            if (mySqlConnection == null)
-            {
+        public static MySqlConnection GetDBConnection() {
+            if (mySqlConnection == null) {
                 string connectionString = ConfigurationManager.ConnectionStrings["SistemaConnectionString"].ConnectionString;
                 //  ^^^^^^^^^^^^^^^^^^^^^^^ ConnectionString em App.config
                 mySqlConnection = new MySqlConnection(connectionString);
