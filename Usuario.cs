@@ -20,7 +20,7 @@ namespace Sistema
         [StringLength(255)]
         public String Email { get; set; }
 
-         // Not null property
+        // Not null property
         [Required]
         // Maximum length value
         [StringLength(32)]

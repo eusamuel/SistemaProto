@@ -133,5 +133,181 @@ namespace Sistema
                     : "");
         }
         #endregion
+
+        private void obraToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FrmCadastroObra filha = FrmCadastroObra.GetInstance();
+
+            // Define a janela como filha desta MDI
+            filha.MdiParent = this;
+
+            // Traz a janela para a frente das demais
+            filha.BringToFront();
+
+            // Restaura a janela filha, caso esteja minimizada
+            filha.WindowState = FormWindowState.Normal;
+
+            // Torna a janela filha visível
+            //filha.Visible = true;
+            filha.Show();
+        }
+
+        private void autorToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FrmCadastroAutor filha = FrmCadastroAutor.GetInstance();
+
+            // Define a janela como filha desta MDI
+            filha.MdiParent = this;
+
+            // Traz a janela para a frente das demais
+            filha.BringToFront();
+
+            // Restaura a janela filha, caso esteja minimizada
+            filha.WindowState = FormWindowState.Normal;
+
+            // Torna a janela filha visível
+            //filha.Visible = true;
+            filha.Show();
+        }
+
+        private void obrasToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FrmRelatorioObras filha = FrmRelatorioObras.GetInstance();
+
+            // Define a janela como filha desta MDI
+            filha.MdiParent = this;
+
+            // Traz a janela para a frente das demais
+            filha.BringToFront();
+
+            // Restaura a janela filha, caso esteja minimizada
+            filha.WindowState = FormWindowState.Normal;
+
+            // Torna a janela filha visível
+            //filha.Visible = true;
+            filha.Show();
+        }
+
+        private void autoresToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FrmRelatorioAutores filha = FrmRelatorioAutores.GetInstance();
+
+            // Define a janela como filha desta MDI
+            filha.MdiParent = this;
+
+            // Traz a janela para a frente das demais
+            filha.BringToFront();
+
+            // Restaura a janela filha, caso esteja minimizada
+            filha.WindowState = FormWindowState.Normal;
+
+            // Torna a janela filha visível
+            //filha.Visible = true;
+            filha.Show();
+        }
+
+        private void controleToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FrmCadastroControle filha = FrmCadastroControle.GetInstance();
+
+            // Define a janela como filha desta MDI
+            filha.MdiParent = this;
+
+            // Traz a janela para a frente das demais
+            filha.BringToFront();
+
+            // Restaura a janela filha, caso esteja minimizada
+            filha.WindowState = FormWindowState.Normal;
+
+            // Torna a janela filha visível
+            //filha.Visible = true;
+            filha.Show();
+        }
+
+        private void controlesToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FrmRelatorioControles filha = FrmRelatorioControles.GetInstance();
+
+            // Define a janela como filha desta MDI
+            filha.MdiParent = this;
+
+            // Traz a janela para a frente das demais
+            filha.BringToFront();
+
+            // Restaura a janela filha, caso esteja minimizada
+            filha.WindowState = FormWindowState.Normal;
+
+            // Torna a janela filha visível
+            //filha.Visible = true;
+            filha.Show();
+        }
+
+        private void leitorToolStripMenuItem_Click(object sender, EventArgs e) {
+            FrmCadastroLeitor filha = FrmCadastroLeitor.GetInstance();
+
+            // Define a janela como filha desta MDI
+            filha.MdiParent = this;
+
+            // Traz a janela para a frente das demais
+            filha.BringToFront();
+
+            // Restaura a janela filha, caso esteja minimizada
+            filha.WindowState = FormWindowState.Normal;
+
+            // Torna a janela filha visível
+            //filha.Visible = true;
+            filha.Show();
+        }
+
+        private void leitoresToolStripMenuItem_Click(object sender, EventArgs e) {
+            FrmRelatorioLeitores filha = FrmRelatorioLeitores.GetInstance();
+
+            // Define a janela como filha desta MDI
+            filha.MdiParent = this;
+
+            // Traz a janela para a frente das demais
+            filha.BringToFront();
+
+            // Restaura a janela filha, caso esteja minimizada
+            filha.WindowState = FormWindowState.Normal;
+
+            // Torna a janela filha visível
+            //filha.Visible = true;
+            filha.Show();
+        }
+
+        private void editoraToolStripMenuItem_Click(object sender, EventArgs e) {
+            FrmCadastroEditora filha = FrmCadastroEditora.GetInstance();
+
+            // Define a janela como filha desta MDI
+            filha.MdiParent = this;
+
+            // Traz a janela para a frente das demais
+            filha.BringToFront();
+
+            // Restaura a janela filha, caso esteja minimizada
+            filha.WindowState = FormWindowState.Normal;
+
+            // Torna a janela filha visível
+            //filha.Visible = true;
+            filha.Show();
+        }
+
+        private void editorasToolStripMenuItem_Click(object sender, EventArgs e) {
+            FrmRelatorioEditoras filha = FrmRelatorioEditoras.GetInstance();
+
+            // Define a janela como filha desta MDI
+            filha.MdiParent = this;
+
+            // Traz a janela para a frente das demais
+            filha.BringToFront();
+
+            // Restaura a janela filha, caso esteja minimizada
+            filha.WindowState = FormWindowState.Normal;
+
+            // Torna a janela filha visível
+            //filha.Visible = true;
+            filha.Show();
+        }
     }
 }
